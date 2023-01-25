@@ -5,39 +5,47 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.Window
 import android.view.WindowManager
+import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
+
+    val currentProgressManageProfile = 60
+    val currentProgressVideoResume = 42
+    private lateinit var progressBarManageProfile: ProgressBar
+    private lateinit var progressBarVideoResume: ProgressBar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //WindowCompat.setDecorFitsSystemWindows(window, false)
+//        requestWindowFeature(Window.FEATURE_NO_TITLE)
+//        this.window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+//        supportActionBar?.hide()
+        //this.window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
         setContentView(R.layout.activity_main)
 
         val marqueeText = findViewById<TextView>(R.id.mainPageMarquee)
         marqueeText.isSelected = true
 
-        /*if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
-            setWindowFlag(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true)
-        }
-        if (Build.VERSION.SDK_INT >= 19) {
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-        }
-        if (Build.VERSION.SDK_INT >= 21) {
-            setWindowFlag(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false)
-            window.statusBarColor = Color.TRANSPARENT
-        }*/
+        this.window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+
+//        val windowInsetsController =
+//            ViewCompat.getWindowInsetsController(window.decorView)
+//
+//        windowInsetsController?.isAppearanceLightNavigationBars = true
+
+        progressBarManageProfile = findViewById(R.id.profileCompleteProgressBar)
+        progressBarVideoResume = findViewById(R.id.videoResumeProgressBar)
+        progressBarManageProfile.progress = currentProgressManageProfile
+        progressBarVideoResume.progress = currentProgressVideoResume
+        progressBarManageProfile.max = 100
+        progressBarVideoResume.max = 100
 
     }
 
-    /*private fun setWindowFlag(bits: Int, on: Boolean) {
-        val win = window
-        val winParams = win.attributes
-        if (on) {
-            winParams.flags = winParams.flags or bits
-        } else {
-            winParams.flags = winParams.flags and bits.inv()
-        }
-        win.attributes = winParams
-    }*/
 }

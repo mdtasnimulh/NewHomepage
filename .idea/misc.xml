@@ -3,12 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/company_interested_layout_bg.xml" value="0.1175" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/count_number_background.xml" value="0.1175" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/gradient_background.xml" value="0.155" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_arrow_drop_down.xml" value="0.123" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_company_interested.xml" value="0.1175" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_marquee_test_icon.xml" value="0.123" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_search.xml" value="0.131" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/main_banner_search_bg.xml" value="0.14" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/manage_resume_background.xml" value="0.132" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/marquee_bg.xml" value="0.123" />
-        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/profile_complete_background.xml" value="0.132" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/profile_complete_progress_bg.xml" value="0.132" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/video_resume_background.xml" value="0.132" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/video_resume_progress_bg.xml" value="0.132" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/activity_main.xml" value="0.36464088397790057" />
       </map>
     </option>
   </component>
