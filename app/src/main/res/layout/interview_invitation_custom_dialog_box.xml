@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/interviewInvitationCustomDialogBox"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="50dp">
+
+        <TextView
+            android:id="@+id/interviewInvitationDialogTextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interview / Test Invitations"
+            android:textColor="#5B5B5B"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/interviewInvitationDialogCloseIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_invitation"
+            android:layout_marginStart="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/interviewInvitationDialogTextTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/interviewInvitationDialogTextTitle" />
+
+        <LinearLayout
+            android:id="@+id/interviewInvitationDialogLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/interviewInvitationDialogTextTitle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/interviewInvitationDialogLiveInterview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="8dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/imgFollowedEmployers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_live_interview"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Live Interview"
+                    android:textAlignment="center"
+                    android:textColor="#5B5B5B"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imgFollowedEmployers"
+                    app:layout_constraintStart_toStartOf="@+id/imgFollowedEmployers"
+                    app:layout_constraintTop_toBottomOf="@+id/imgFollowedEmployers" />
+
+                <TextView
+                    android:id="@+id/countNumberFollowedEmployers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginEnd="-4dp"
+                    android:background="@drawable/count_number_background"
+                    android:padding="1dp"
+                    android:text="+9"
+                    android:textColor="#ffffff"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/imgFollowedEmployers"
+                    app:layout_constraintTop_toTopOf="@+id/imgFollowedEmployers" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/interviewInvitationDialogOnlineTest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:id="@+id/iconInvitations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_online_test"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Online Test Invitations"
+                    android:textAlignment="center"
+                    android:textColor="#5B5B5B"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@+id/iconInvitations"
+                    app:layout_constraintStart_toStartOf="@+id/iconInvitations"
+                    app:layout_constraintTop_toBottomOf="@+id/iconInvitations" />
+
+                <TextView
+                    android:id="@+id/countNumberInvitations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginEnd="-4dp"
+                    android:background="@drawable/count_number_background"
+                    android:padding="1dp"
+                    android:text="+9"
+                    android:textColor="#ffffff"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@+id/iconInvitations"
+                    app:layout_constraintTop_toTopOf="@+id/iconInvitations" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/interviewInvitationDialogVideoInterview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="8dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/iconMyCalendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_video_interview"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Video Interview"
+                    android:textAlignment="center"
+                    android:textColor="#5B5B5B"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@+id/iconMyCalendar"
+                    app:layout_constraintStart_toStartOf="@+id/iconMyCalendar"
+                    app:layout_constraintTop_toBottomOf="@+id/iconMyCalendar" />
+
+                <TextView
+                    android:id="@+id/countNumberMyCalendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginEnd="-4dp"
+                    android:background="@drawable/count_number_background"
+                    android:padding="1dp"
+                    android:text="+9"
+                    android:textColor="#ffffff"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/iconMyCalendar"
+                    app:layout_constraintTop_toTopOf="@+id/iconMyCalendar" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/interviewInvitationDialogGeneralInterview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="8dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/iconMyPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_general_interview"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="General Interview"
+                    android:textAlignment="center"
+                    android:textColor="#5B5B5B"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@+id/iconMyPoints"
+                    app:layout_constraintStart_toStartOf="@+id/iconMyPoints"
+                    app:layout_constraintTop_toBottomOf="@+id/iconMyPoints" />
+
+                <TextView
+                    android:id="@+id/countNumberMyPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginEnd="-4dp"
+                    android:background="@drawable/count_number_background"
+                    android:padding="1dp"
+                    android:text="+9"
+                    android:textColor="#ffffff"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/iconMyPoints"
+                    app:layout_constraintTop_toTopOf="@+id/iconMyPoints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

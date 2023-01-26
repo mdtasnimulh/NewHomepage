@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="0dp"
+    app:cardElevation="0dp"
+    android:layout_marginEnd="16dp"
+    app:cardCornerRadius="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bdJobsLearningRvLayoutImage"
+            android:layout_width="190dp"
+            android:layout_height="70dp"
+            android:src="@drawable/bdjobs_learning_img"
+            android:background="@drawable/company_interested_layout_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bdJobsLearningRvLayoutText"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="Designing with the WCAG 2. Guidelines"
+            android:textColor="#595959"
+            android:textSize="12sp"
+            android:layout_marginTop="7dp"
+
+            app:layout_constraintStart_toStartOf="@+id/bdJobsLearningRvLayoutImage"
+            app:layout_constraintTop_toBottomOf="@+id/bdJobsLearningRvLayoutImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

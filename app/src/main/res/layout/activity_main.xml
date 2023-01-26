@@ -318,7 +318,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:paddingBottom="8dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -832,6 +832,8 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="8dp">
 
@@ -1051,6 +1053,126 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView7"
                 tools:itemCount="1"
                 tools:listitem="@layout/my_favourite_search_layout" />
+
+
+            <TextView
+                android:id="@+id/interviewInvitationRvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="Interview Invitations"
+                android:textColor="#595959"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/myFavouriteSearchRV" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/interviewInvitationRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/interviewInvitationRvText"
+                tools:itemCount="4"
+                tools:listitem="@layout/interview_invitation_layout" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/interviewInvitationRvShowHideButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#13A10E"
+                android:drawableEnd="@drawable/ic_invitation_arrow_down"
+                android:drawableTint="#FFFFFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="View All"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:cornerRadius="200dp"
+                app:layout_constraintEnd_toEndOf="@+id/interviewInvitationRv"
+                app:layout_constraintStart_toStartOf="@+id/interviewInvitationRv"
+                app:layout_constraintTop_toBottomOf="@+id/interviewInvitationRv" />
+
+            <TextView
+                android:id="@+id/bdJobsLearningTvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Bdjobs Learning Top Courses"
+                android:textColor="#595959"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interviewInvitationRvShowHideButton" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="View All"
+                android:textColor="#3167A8"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/bdJobsLearningTvTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bdJobsLearningTvTitle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bdJobsLearningRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                tools:itemCount="5"
+                app:layout_constraintTop_toBottomOf="@id/bdJobsLearningTvTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#40808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bdJobsLearningRv" />
+
+            <TextView
+                android:id="@+id/trendingInBdJobsTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trending in Bdjobs"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view3" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bdJobsTrendingRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                tools:itemCount="5"
+                app:layout_constraintTop_toBottomOf="@id/trendingInBdJobsTitleTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -7,6 +7,7 @@
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/count_number_background.xml" value="0.1175" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/gradient_background.xml" value="0.155" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_arrow_drop_down.xml" value="0.123" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_close_invitation.xml" value="0.126" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_company_interested.xml" value="0.1175" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_marquee_test_icon.xml" value="0.123" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_search.xml" value="0.131" />
@@ -21,6 +22,10 @@
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/video_resume_background.xml" value="0.132" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/video_resume_progress_bg.xml" value="0.132" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/bdjobs_learning_rv_layout.xml" value="0.45879732739420936" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/bdjobs_trending_rv_layout.xml" value="0.33" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/interview_invitation_custom_dialog_box.xml" value="0.33993399339933994" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/interview_invitation_layout.xml" value="0.33" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/my_favourite_search_layout.xml" value="0.67" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/recomend_jobs_layout.xml" value="0.25" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/recommed_jobs_layout.xml" value="0.33" />
