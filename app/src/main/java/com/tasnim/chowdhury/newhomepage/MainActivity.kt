@@ -11,6 +11,8 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +21,12 @@ class MainActivity : AppCompatActivity() {
     val currentProgressVideoResume = 42
     private lateinit var progressBarManageProfile: ProgressBar
     private lateinit var progressBarVideoResume: ProgressBar
+
+    private lateinit var recommendJobsRecyclerView: RecyclerView
+    private lateinit var recommendJobsAdapter: RecommendJobsAdapter
+
+    private lateinit var favouriteSearchRecyclerView: RecyclerView
+    private lateinit var favouriteSearchAdapter: FavouriteSearchAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +53,18 @@ class MainActivity : AppCompatActivity() {
         progressBarVideoResume.progress = currentProgressVideoResume
         progressBarManageProfile.max = 100
         progressBarVideoResume.max = 100
+
+        // Recycler View For Recommend Jobs
+        recommendJobsRecyclerView = findViewById(R.id.recommendJobsRV)
+        recommendJobsAdapter = RecommendJobsAdapter()
+        recommendJobsRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+        recommendJobsRecyclerView.adapter = recommendJobsAdapter
+
+        // Recycler View For Favourite Search
+        favouriteSearchRecyclerView = findViewById(R.id.myFavouriteSearchRV)
+        favouriteSearchAdapter = FavouriteSearchAdapter()
+        favouriteSearchRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+        favouriteSearchRecyclerView.adapter = favouriteSearchAdapter
 
     }
 

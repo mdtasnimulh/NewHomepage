@@ -13,11 +13,17 @@
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/main_banner_search_bg.xml" value="0.14" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/manage_resume_background.xml" value="0.132" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/marquee_bg.xml" value="0.123" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/my_favourite_search_card_bg.xml" value="0.155" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/profile_complete_background.xml" value="0.132" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/profile_complete_progress_bg.xml" value="0.132" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/recomend_jobs_card_bg.xml" value="0.155" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/rv_card_bg.xml" value="0.155" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/video_resume_background.xml" value="0.132" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/video_resume_progress_bg.xml" value="0.132" />
-        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/activity_main.xml" value="0.36464088397790057" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/my_favourite_search_layout.xml" value="0.67" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/recomend_jobs_layout.xml" value="0.25" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/recommed_jobs_layout.xml" value="0.33" />
       </map>
     </option>
   </component>
