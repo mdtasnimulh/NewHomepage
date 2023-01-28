@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MoreActivity">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/moreBdJobsLearning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:cardElevation="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="96dp"
+                    android:layout_height="76dp">
+
+                    <ImageView
+                        android:id="@+id/moreBdJobsLearnIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:contentDescription="bdJobsLearning"
+                        android:src="@drawable/ic_bdjobs_learning_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Bdjobs Learning"
+                        android:textColor="#595959"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/moreBdJobsLearnIcon"
+                        app:layout_constraintStart_toStartOf="@+id/moreBdJobsLearnIcon"
+                        app:layout_constraintTop_toBottomOf="@+id/moreBdJobsLearnIcon" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/moreManageProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:cardElevation="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/moreBdJobsLearning"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="96dp"
+                    android:layout_height="76dp">
+
+                    <ImageView
+                        android:id="@+id/moreManageProfileIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:contentDescription="bdJobsLearning"
+                        android:src="@drawable/ic_manage_profile_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Manage Profile"
+                        android:textColor="#595959"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/moreManageProfileIcon"
+                        app:layout_constraintStart_toStartOf="@+id/moreManageProfileIcon"
+                        app:layout_constraintTop_toBottomOf="@+id/moreManageProfileIcon" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/moreFavouriteSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:cardElevation="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/moreManageProfile"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="96dp"
+                    android:layout_height="76dp">
+
+                    <ImageView
+                        android:id="@+id/moreFavouriteSearchIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:contentDescription="bdJobsLearning"
+                        android:src="@drawable/ic_bdjobs_learning_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Favorite Search"
+                        android:textColor="#595959"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/moreFavouriteSearchIcon"
+                        app:layout_constraintStart_toStartOf="@+id/moreFavouriteSearchIcon"
+                        app:layout_constraintTop_toBottomOf="@+id/moreFavouriteSearchIcon" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/moreAppliedJobs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:cardElevation="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/moreFavouriteSearch"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="96dp"
+                    android:layout_height="76dp">
+
+                    <ImageView
+                        android:id="@+id/moreAppliedJobsIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:contentDescription="bdJobsLearning"
+                        android:src="@drawable/ic_applied_jobs"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Applied Jobs"
+                        android:textColor="#595959"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="@+id/moreAppliedJobsIcon"
+                        app:layout_constraintStart_toStartOf="@+id/moreAppliedJobsIcon"
+                        app:layout_constraintTop_toBottomOf="@+id/moreAppliedJobsIcon" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/moreFollowedEmployers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:cardElevation="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/moreAppliedJobs"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="96dp"
+                    android:layout_height="76dp">
+
+                    <ImageView
+                        android:id="@+id/moreFollowedEmployersIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:contentDescription="bdJobsLearning"
+                        android:src="@drawable/ic_followed_employers"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Followed Employers"
+                        android:textAlignment="center"
+                        android:textColor="#595959"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/moreFollowedEmployersIcon"
+                        app:layout_constraintStart_toStartOf="@+id/moreFollowedEmployersIcon"
+                        app:layout_constraintTop_toBottomOf="@+id/moreFollowedEmployersIcon" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

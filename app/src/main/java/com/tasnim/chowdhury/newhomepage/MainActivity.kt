@@ -1,6 +1,7 @@
 package com.tasnim.chowdhury.newhomepage
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,8 +16,12 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.tasnim.chowdhury.newhomepage.databinding.ActivityMainBinding
+import com.tasnim.chowdhury.newhomepage.databinding.FragmentGuestUserBottomSheetBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
 
     val list: List<String> = listOf(
         "fasdfdsafsdf",
@@ -56,12 +61,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         //WindowCompat.setDecorFitsSystemWindows(window, false)
 //        requestWindowFeature(Window.FEATURE_NO_TITLE)
 //        this.window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 //        supportActionBar?.hide()
         //this.window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         val marqueeText = findViewById<TextView>(R.id.mainPageMarquee)
         marqueeText.isSelected = true
@@ -169,6 +175,11 @@ class MainActivity : AppCompatActivity() {
             bottomSheetDialog.setCanceledOnTouchOutside(true)
             bottomSheetDialog.setContentView(bottomSheetView)
             bottomSheetDialog.show()
+        }
+
+        binding.categorySeeMore.setOnClickListener {
+            val moreIntent = Intent(this, MoreActivity::class.java)
+            startActivity(moreIntent)
         }
     }
 
