@@ -2,6 +2,8 @@ package com.tasnim.chowdhury.newhomepage
 
 import android.app.Dialog
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.ImageView
@@ -12,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,8 +30,10 @@ class MainActivity : AppCompatActivity() {
 
     val currentProgressManageProfile = 60
     val currentProgressVideoResume = 42
+
     private lateinit var progressBarManageProfile: ProgressBar
     private lateinit var progressBarVideoResume: ProgressBar
+    //private lateinit var manageProfileDialogProgressBar: ProgressBar
 
     private lateinit var recommendJobsRecyclerView: RecyclerView
     private lateinit var recommendJobsAdapter: RecommendJobsAdapter
@@ -46,6 +51,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var bdJobsTrendingAdapter: BdJobsTrendingAdapter
 
     private lateinit var layoutInterviewInvitationsDialog: ConstraintLayout
+
+    private lateinit var openProfile: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,6 +73,7 @@ class MainActivity : AppCompatActivity() {
 //
 //        windowInsetsController?.isAppearanceLightNavigationBars = true
 
+        // Setting Progress Bar
         progressBarManageProfile = findViewById(R.id.profileCompleteProgressBar)
         progressBarVideoResume = findViewById(R.id.videoResumeProgressBar)
         progressBarManageProfile.progress = currentProgressManageProfile
@@ -106,6 +114,7 @@ class MainActivity : AppCompatActivity() {
         val width = (resources.displayMetrics.widthPixels * 0.97).toInt()
         val height = (resources.displayMetrics.heightPixels * 0.27).toInt()
 
+        // Custom Dialog Box For Interview Invitations
         layoutInterviewInvitationsDialog = findViewById(R.id.invitationsGridCl)
         layoutInterviewInvitationsDialog.setOnClickListener {
             val dialog = Dialog(this)
@@ -133,6 +142,33 @@ class MainActivity : AppCompatActivity() {
             }
 
             dialog.show()
+        }
+
+        // Bottom Sheet Dialog For Profile Information View
+        openProfile = findViewById(R.id.profile_arrow_drop_down)
+        openProfile.setOnClickListener {
+            val bottomSheetDialog = BottomSheetDialog(
+                this@MainActivity,
+            )
+
+            val bottomSheetView = LayoutInflater.from(applicationContext).inflate(
+                R.layout.manage_profile_bottom_sheet_layout,
+                findViewById(R.id.manageProfileBottomSheetLayout)
+            )
+
+            /*bottomSheetView.findViewById<View>(R.id.interviewInvitationDialogCloseIcon).setOnClickListener {
+                Toast.makeText(this, "Bottom Sheet Close", Toast.LENGTH_SHORT).show()
+                bottomSheetDialog.dismiss()
+            }*/
+
+            //val manageProfileDialogBoxCurrentProgress = 65
+            //manageProfileDialogProgressBar = bottomSheetDialog.findViewById(R.id.manageProfileDialogProgressBar)!!
+            //manageProfileDialogProgressBar.progress = manageProfileDialogBoxCurrentProgress
+           // manageProfileDialogProgressBar.max = 100
+
+            bottomSheetDialog.setCanceledOnTouchOutside(true)
+            bottomSheetDialog.setContentView(bottomSheetView)
+            bottomSheetDialog.show()
         }
     }
 

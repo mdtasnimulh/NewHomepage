@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/manageProfileBottomSheetLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bottom_sheet_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp"
+        android:background="@drawable/bottom_sheet_background">
+
+        <ImageView
+            android:id="@+id/manageProfileImage"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/new_profile_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/manageProfileUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Md. Tasnimul Hasan"
+            android:textColor="#595959"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/manageProfileImage"
+            app:layout_constraintTop_toTopOf="@+id/manageProfileImage" />
+
+        <TextView
+            android:id="@+id/manageProfileUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="mdtasnimulh@gmail.com"
+            android:textColor="#595959"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/manageProfileUserName"
+            app:layout_constraintTop_toBottomOf="@+id/manageProfileUserName" />
+
+        <LinearLayout
+            android:id="@+id/manageProfileDialogLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:background="@drawable/manage_profile_dialog_points_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/manageProfileImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/manageProfileImage">
+
+            <ImageView
+                android:id="@+id/manageProfileDialogShieldIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mypoints_shield" />
+
+            <TextView
+                android:id="@+id/manageProfileDialogMyPointsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="210"
+                android:textColor="#3167A8"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Pts"
+                android:textColor="#3167A8"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/manageProfileCompleteTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Profile Completeness:"
+            android:textColor="#595959"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/manageProfileImage"
+            app:layout_constraintTop_toBottomOf="@+id/manageProfileImage" />
+
+        <TextView
+            android:id="@+id/manageProfileCompleteTvPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="65%"
+            android:textColor="#3167A8"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/manageProfileCompleteTv"
+            app:layout_constraintStart_toEndOf="@+id/manageProfileCompleteTv"
+            app:layout_constraintTop_toTopOf="@+id/manageProfileCompleteTv" />
+
+        <ProgressBar
+            android:id="@+id/manageProfileDialogProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="8dp"
+            android:progress="65"
+            android:progressDrawable="@drawable/profile_complete_progress_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/manageProfileCompleteTvPercentage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/manageProfileCompleteTvPercentage"
+            app:layout_constraintTop_toTopOf="@+id/manageProfileCompleteTvPercentage" />
+
+        <TextView
+            android:id="@+id/manageProfileDialogBdJobsProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:text="Bdjobs Profile"
+            android:textColor="#595959"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manageProfileCompleteTv" />
+
+        <View
+            android:id="@+id/manageProfileDialogView1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EDEDED"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manageProfileDialogBdJobsProfile" />
+
+        <TextView
+            android:id="@+id/manageProfileDialogBdJobsResume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:text="Video Resume"
+            android:textColor="#595959"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manageProfileDialogView1" />
+
+        <View
+            android:id="@+id/manageProfileDialogView2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EDEDED"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manageProfileDialogBdJobsResume" />
+
+        <TextView
+            android:id="@+id/manageProfileDialogPersonalizedResume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:text="Personalized Resume"
+            android:textColor="#595959"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manageProfileDialogView2" />
+
+        <View
+            android:id="@+id/manageProfileDialogView3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EDEDED"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manageProfileDialogPersonalizedResume" />
+
+        <TextView
+            android:id="@+id/manageProfileDialogShortlistedJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:text="Shortlisted Jobs (05)"
+            android:textColor="#595959"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manageProfileDialogView3" />
+
+        <View
+            android:id="@+id/manageProfileDialogView4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EDEDED"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manageProfileDialogShortlistedJob" />
+
+        <TextView
+            android:id="@+id/manageProfileDialogFollowedEmployers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:text="Followed Employers (05)"
+            android:textColor="#595959"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manageProfileDialogView4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
