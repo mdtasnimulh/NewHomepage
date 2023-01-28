@@ -5,15 +5,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".MoreActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/more_header_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3167A8"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/moreFragmentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/appbar_notification_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_notifications"
+            app:layout_constraintBottom_toBottomOf="@+id/moreFragmentTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/moreFragmentTitle" />
+
+        <ImageView
+            android:id="@+id/appbar_message_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_messages"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/appbar_notification_icon"
+            app:layout_constraintEnd_toStartOf="@+id/appbar_notification_icon"
+            app:layout_constraintTop_toTopOf="@+id/appbar_notification_icon" />
+
+        <ImageView
+            android:id="@+id/appbar_my_points_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_points"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/appbar_message_icon"
+            app:layout_constraintEnd_toStartOf="@+id/appbar_message_icon"
+            app:layout_constraintTop_toTopOf="@+id/appbar_message_icon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_banner_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/main_banner_search_bg"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/moreFragmentTitle"
+            app:layout_constraintEnd_toStartOf="@+id/appbar_my_points_icon"
+            app:layout_constraintStart_toEndOf="@+id/moreFragmentTitle"
+            app:layout_constraintTop_toTopOf="@+id/moreFragmentTitle">
+
+            <TextView
+                android:id="@+id/mainHeaderSearchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:color="#595959"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="Search jobs"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <HorizontalScrollView
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/more_header_cl">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
@@ -49,9 +147,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="Bdjobs Learning"
+                        android:textAlignment="center"
                         android:textColor="#595959"
                         android:textSize="10sp"
-                        android:textAlignment="center"
                         app:layout_constraintEnd_toEndOf="@+id/moreBdJobsLearnIcon"
                         app:layout_constraintStart_toStartOf="@+id/moreBdJobsLearnIcon"
                         app:layout_constraintTop_toBottomOf="@+id/moreBdJobsLearnIcon" />
@@ -90,9 +188,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="Manage Profile"
+                        android:textAlignment="center"
                         android:textColor="#595959"
                         android:textSize="10sp"
-                        android:textAlignment="center"
                         app:layout_constraintEnd_toEndOf="@+id/moreManageProfileIcon"
                         app:layout_constraintStart_toStartOf="@+id/moreManageProfileIcon"
                         app:layout_constraintTop_toBottomOf="@+id/moreManageProfileIcon" />
@@ -131,9 +229,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="Favorite Search"
+                        android:textAlignment="center"
                         android:textColor="#595959"
                         android:textSize="10sp"
-                        android:textAlignment="center"
                         app:layout_constraintEnd_toEndOf="@+id/moreFavouriteSearchIcon"
                         app:layout_constraintStart_toStartOf="@+id/moreFavouriteSearchIcon"
                         app:layout_constraintTop_toBottomOf="@+id/moreFavouriteSearchIcon" />
@@ -172,9 +270,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="Applied Jobs"
+                        android:textAlignment="center"
                         android:textColor="#595959"
                         android:textSize="10sp"
-                        android:textAlignment="center"
                         app:layout_constraintEnd_toEndOf="@+id/moreAppliedJobsIcon"
                         app:layout_constraintStart_toStartOf="@+id/moreAppliedJobsIcon"
                         app:layout_constraintTop_toBottomOf="@+id/moreAppliedJobsIcon" />
@@ -189,8 +287,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 app:cardElevation="3dp"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/moreAppliedJobs"
                 app:layout_constraintTop_toTopOf="parent">
 
