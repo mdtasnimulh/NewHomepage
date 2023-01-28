@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/guestUserHotJobsRvLayoutCV"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:cardCornerRadius="3dp"
+    android:layout_marginBottom="16dp"
+    android:layout_width="160dp"
+    android:layout_height="70dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:background="@drawable/guest_user_hot_jobs_layout_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/guestUserHotJobsRvCompanyLogoImageCL"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/guest_user_hot_jobs_rv_logo_bg"
+            android:padding="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/guestUserHotJobsRvCompanyLogoImage"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/guest_user_company_logo_img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/guestUserHotJobsCompanyTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nuvista Pharmaerty Lorem ip ..."
+            android:textColor="#3167A8"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guestUserHotJobsRvCompanyLogoImageCL"
+            app:layout_constraintTop_toTopOf="@+id/guestUserHotJobsRvCompanyLogoImageCL" />
+
+        <TextView
+            android:id="@+id/guestUserCompanyJobCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="124"
+            android:textColor="#3167A8"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/guestUserCompanyJobCountForwardTV"
+            app:layout_constraintEnd_toStartOf="@+id/guestUserCompanyJobCountForwardTV"
+            app:layout_constraintTop_toTopOf="@+id/guestUserCompanyJobCountForwardTV" />
+
+        <TextView
+            android:id="@+id/guestUserCompanyJobCountForwardTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:drawablePadding="8dp"
+            android:drawableTint="#3167A8"
+            android:text="Jobs"
+            android:textColor="#3167A8"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -3,10 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/bottom_sheet_background.xml" value="0.126" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/company_interested_layout_bg.xml" value="0.1175" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/count_number_background.xml" value="0.1175" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/gradient_background.xml" value="0.155" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/guest_user_count_bg.xml" value="0.126" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/guest_user_edit_text_bd.xml" value="0.126" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/guest_user_edit_text_bg_full.xml" value="0.126" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/guest_user_hot_jobs_layout_bg.xml" value="0.126" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/guest_user_hot_jobs_rv_logo_bg.xml" value="0.126" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/guest_user_search_keyword_bg.xml" value="0.126" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/guuest_user_sign_btn_bg.xml" value="0.12" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_arrow_drop_down.xml" value="0.123" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_arrow_forward.xml" value="0.126" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_close_invitation.xml" value="0.126" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_company_interested.xml" value="0.1175" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/ic_marquee_test_icon.xml" value="0.123" />
@@ -21,11 +30,17 @@
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/rv_card_bg.xml" value="0.155" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/video_resume_background.xml" value="0.132" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/drawable/video_resume_progress_bg.xml" value="0.132" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/activity_guest_user.xml" value="0.2" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/bdjobs_learning_rv_layout.xml" value="0.45879732739420936" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/bdjobs_trending_rv_layout.xml" value="0.33" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/fragment_guest_user_bottom_sheet.xml" value="0.21041666666666667" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/guest_user_bottom_sheet_jobs_rv_layout.xml" value="0.22" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/guest_user_company_jobs_bottom_sheet_layout.xml" value="0.23170731707317074" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/guest_user_hot_jobs_rv_layout.xml" value="0.5" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/interview_invitation_custom_dialog_box.xml" value="0.33993399339933994" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/interview_invitation_layout.xml" value="0.33" />
+        <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/manage_profile_bottom_sheet_layout.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/my_favourite_search_layout.xml" value="0.67" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/recomend_jobs_layout.xml" value="0.25" />
         <entry key="..\:/Users/tasnimul.hasan/AndroidStudioProjects/NewHomepage/app/src/main/res/layout/recommed_jobs_layout.xml" value="0.33" />

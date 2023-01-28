@@ -16,7 +16,12 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.CustomTheme.NoActionBarAndStatus">
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".GuestUserActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NewHomepage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
