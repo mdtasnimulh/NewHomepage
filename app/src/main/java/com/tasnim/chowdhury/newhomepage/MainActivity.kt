@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var layoutInterviewInvitationsDialog: ConstraintLayout
 
     private lateinit var openProfile: ImageView
+    private lateinit var logoImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -152,35 +153,43 @@ class MainActivity : AppCompatActivity() {
 
         // Bottom Sheet Dialog For Profile Information View
         openProfile = findViewById(R.id.profile_arrow_drop_down)
+        logoImage = findViewById(R.id.main_profile_logo)
         openProfile.setOnClickListener {
-            val bottomSheetDialog = BottomSheetDialog(
-                this@MainActivity,
-            )
-
-            val bottomSheetView = LayoutInflater.from(applicationContext).inflate(
-                R.layout.manage_profile_bottom_sheet_layout,
-                findViewById(R.id.manageProfileBottomSheetLayout)
-            )
-
-            /*bottomSheetView.findViewById<View>(R.id.interviewInvitationDialogCloseIcon).setOnClickListener {
-                Toast.makeText(this, "Bottom Sheet Close", Toast.LENGTH_SHORT).show()
-                bottomSheetDialog.dismiss()
-            }*/
-
-            //val manageProfileDialogBoxCurrentProgress = 65
-            //manageProfileDialogProgressBar = bottomSheetDialog.findViewById(R.id.manageProfileDialogProgressBar)!!
-            //manageProfileDialogProgressBar.progress = manageProfileDialogBoxCurrentProgress
-           // manageProfileDialogProgressBar.max = 100
-
-            bottomSheetDialog.setCanceledOnTouchOutside(true)
-            bottomSheetDialog.setContentView(bottomSheetView)
-            bottomSheetDialog.show()
+            bottomSheetDialog()
+        }
+        logoImage.setOnClickListener {
+            bottomSheetDialog()
         }
 
         binding.categorySeeMore.setOnClickListener {
             val moreIntent = Intent(this, MoreActivity::class.java)
             startActivity(moreIntent)
         }
+    }
+
+    private fun bottomSheetDialog(){
+        val bottomSheetDialog = BottomSheetDialog(
+            this@MainActivity,
+        )
+
+        val bottomSheetView = LayoutInflater.from(applicationContext).inflate(
+            R.layout.manage_profile_bottom_sheet_layout,
+            findViewById(R.id.manageProfileBottomSheetLayout)
+        )
+
+        /*bottomSheetView.findViewById<View>(R.id.interviewInvitationDialogCloseIcon).setOnClickListener {
+            Toast.makeText(this, "Bottom Sheet Close", Toast.LENGTH_SHORT).show()
+            bottomSheetDialog.dismiss()
+        }*/
+
+        //val manageProfileDialogBoxCurrentProgress = 65
+        //manageProfileDialogProgressBar = bottomSheetDialog.findViewById(R.id.manageProfileDialogProgressBar)!!
+        //manageProfileDialogProgressBar.progress = manageProfileDialogBoxCurrentProgress
+        // manageProfileDialogProgressBar.max = 100
+
+        bottomSheetDialog.setCanceledOnTouchOutside(true)
+        bottomSheetDialog.setContentView(bottomSheetView)
+        bottomSheetDialog.show()
     }
 
 }

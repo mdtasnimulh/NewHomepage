@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
-            android:weightSum="4"
+            android:weightSum="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/interviewInvitationDialogTextTitle">
@@ -52,6 +52,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_marginEnd="8dp"
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="8dp"
                 android:clickable="true"
@@ -104,6 +105,7 @@
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
+                android:layout_marginStart="8dp"
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="8dp">
 
@@ -147,11 +149,25 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/interviewInvitationDialogLL2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/interviewInvitationDialogLL">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/interviewInvitationDialogVideoInterview"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_marginEnd="8dp"
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="8dp"
                 android:clickable="true"
@@ -204,6 +220,7 @@
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="8dp"
+                android:layout_marginStart="8dp"
                 android:clickable="true"
                 android:focusable="true">
 
