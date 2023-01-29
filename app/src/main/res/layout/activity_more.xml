@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -45,10 +44,10 @@
             android:id="@+id/appbar_message_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
             android:clickable="true"
             android:focusable="true"
             android:src="@drawable/ic_messages"
-            android:layout_marginEnd="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/appbar_notification_icon"
             app:layout_constraintEnd_toStartOf="@+id/appbar_notification_icon"
             app:layout_constraintTop_toTopOf="@+id/appbar_notification_icon" />
@@ -57,10 +56,10 @@
             android:id="@+id/appbar_my_points_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
             android:clickable="true"
             android:focusable="true"
             android:src="@drawable/ic_points"
-            android:layout_marginEnd="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/appbar_message_icon"
             app:layout_constraintEnd_toStartOf="@+id/appbar_message_icon"
             app:layout_constraintTop_toTopOf="@+id/appbar_message_icon" />
@@ -106,9 +105,10 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <HorizontalScrollView
-        android:layout_margin="16dp"
+        android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/more_header_cl">
@@ -326,5 +326,1347 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </HorizontalScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Profile Activities-->
+            <TextView
+                android:id="@+id/morePATitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Profile Activities"
+                android:textColor="#595959"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/moreCategoryLLPA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/morePATitle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/moreBdJobsProfileCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/moreBdJobsProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_bdjobs_profile_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Bdjobs Profile"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/moreBdJobsProfile"
+                        app:layout_constraintStart_toStartOf="@+id/moreBdJobsProfile"
+                        app:layout_constraintTop_toBottomOf="@+id/moreBdJobsProfile" />
+
+                    <TextView
+                        android:id="@+id/moreBdJobsProfileCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="@+id/moreBdJobsProfile"
+                        app:layout_constraintTop_toTopOf="@+id/moreBdJobsProfile" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/moreVideoResumeCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconMoreVideoResume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_video_resume_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Video Resume"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconMoreVideoResume"
+                        app:layout_constraintStart_toStartOf="@+id/iconMoreVideoResume"
+                        app:layout_constraintTop_toBottomOf="@+id/iconMoreVideoResume" />
+
+                    <TextView
+                        android:id="@+id/countNumberMoreVR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconMoreVideoResume"
+                        app:layout_constraintTop_toTopOf="@+id/iconMoreVideoResume" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/personalizedResumeCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconPersonalizedResume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_personalized_resume_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Personalized Resume"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconPersonalizedResume"
+                        app:layout_constraintStart_toStartOf="@+id/iconPersonalizedResume"
+                        app:layout_constraintTop_toBottomOf="@+id/iconPersonalizedResume" />
+
+                    <TextView
+                        android:id="@+id/countNumberPersonalizedResume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconPersonalizedResume"
+                        app:layout_constraintTop_toTopOf="@+id/iconPersonalizedResume" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/emailedResumeCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconEmailedResume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_emailed_resume_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Emailed Resume"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconEmailedResume"
+                        app:layout_constraintStart_toStartOf="@+id/iconEmailedResume"
+                        app:layout_constraintTop_toBottomOf="@+id/iconEmailedResume" />
+
+                    <TextView
+                        android:id="@+id/countNumberEmailedResume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconEmailedResume"
+                        app:layout_constraintTop_toTopOf="@+id/iconEmailedResume" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moreCategoryLLPA2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moreCategoryLLPA">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/empViewedCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconEmpViewed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_emp_viewed_resume"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Employer Viewed resume"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconEmpViewed"
+                        app:layout_constraintStart_toStartOf="@+id/iconEmpViewed"
+                        app:layout_constraintTop_toBottomOf="@+id/iconEmpViewed" />
+
+                    <TextView
+                        android:id="@+id/countNumberEmpViewed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="@+id/iconEmpViewed"
+                        app:layout_constraintTop_toTopOf="@+id/iconEmpViewed" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/moreView1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#66595959"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/moreCategoryLLPA2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!--Jobs-->
+            <TextView
+                android:id="@+id/moreJobsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Jobs"
+                android:textColor="#595959"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moreView1" />
+
+            <LinearLayout
+                android:id="@+id/moreCategoryLLJobs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moreJobsTitle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/generalSearchCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconGeneralSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_general_search_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="General Search"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconGeneralSearch"
+                        app:layout_constraintStart_toStartOf="@+id/iconGeneralSearch"
+                        app:layout_constraintTop_toBottomOf="@+id/iconGeneralSearch" />
+
+                    <TextView
+                        android:id="@+id/countNumberGeneralSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconGeneralSearch"
+                        app:layout_constraintTop_toTopOf="@+id/iconGeneralSearch" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/newJobsCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconNewJobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_new_jobs_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="New Jobs"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconNewJobs"
+                        app:layout_constraintStart_toStartOf="@+id/iconNewJobs"
+                        app:layout_constraintTop_toBottomOf="@+id/iconNewJobs" />
+
+                    <TextView
+                        android:id="@+id/countNumberNewJobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconNewJobs"
+                        app:layout_constraintTop_toTopOf="@+id/iconNewJobs" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/deadlineTomorrowCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconDeadlineTomorrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_deadline_tomorrow_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Deadline Tomorrow"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconDeadlineTomorrow"
+                        app:layout_constraintStart_toStartOf="@+id/iconDeadlineTomorrow"
+                        app:layout_constraintTop_toBottomOf="@+id/iconDeadlineTomorrow" />
+
+                    <TextView
+                        android:id="@+id/countNumberDeadlineTomorrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconDeadlineTomorrow"
+                        app:layout_constraintTop_toTopOf="@+id/iconDeadlineTomorrow" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ptJobsCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconPtJobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_pt_jobs_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Part Time Jobs"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconPtJobs"
+                        app:layout_constraintStart_toStartOf="@+id/iconPtJobs"
+                        app:layout_constraintTop_toBottomOf="@+id/iconPtJobs" />
+
+                    <TextView
+                        android:id="@+id/countNumberPtJobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconPtJobs"
+                        app:layout_constraintTop_toTopOf="@+id/iconPtJobs" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moreCategoryLLJobs2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moreCategoryLLJobs">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/contractualJobsCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconContractualJobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_contract_jobs_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Contractual Jobs"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconContractualJobs"
+                        app:layout_constraintStart_toStartOf="@+id/iconContractualJobs"
+                        app:layout_constraintTop_toBottomOf="@+id/iconContractualJobs" />
+
+                    <TextView
+                        android:id="@+id/countNumberContractualJobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconContractualJobs"
+                        app:layout_constraintTop_toTopOf="@+id/iconContractualJobs" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/govtJobsCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconGovtJobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_government_jobs_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Government Jobs"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconGovtJobs"
+                        app:layout_constraintStart_toStartOf="@+id/iconGovtJobs"
+                        app:layout_constraintTop_toBottomOf="@+id/iconGovtJobs" />
+
+                    <TextView
+                        android:id="@+id/countNumberGovtJobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconGovtJobs"
+                        app:layout_constraintTop_toTopOf="@+id/iconGovtJobs" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/moreView2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#66595959"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/moreCategoryLLJobs2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!--Invitations-->
+            <TextView
+                android:id="@+id/moreInvitationsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:text="Invitations"
+                android:textColor="#595959"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moreView2" />
+
+            <LinearLayout
+                android:id="@+id/moreInvitationsLL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moreInvitationsTitle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/interviewInvitationDialogLiveInterview"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/imgFollowedEmployers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_live_interview"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Live Interview"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/imgFollowedEmployers"
+                        app:layout_constraintStart_toStartOf="@+id/imgFollowedEmployers"
+                        app:layout_constraintTop_toBottomOf="@+id/imgFollowedEmployers" />
+
+                    <TextView
+                        android:id="@+id/countNumberFollowedEmployers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/imgFollowedEmployers"
+                        app:layout_constraintTop_toTopOf="@+id/imgFollowedEmployers" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/interviewInvitationDialogOnlineTest"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconInvitations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_online_test"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Online Test Invitations"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconInvitations"
+                        app:layout_constraintStart_toStartOf="@+id/iconInvitations"
+                        app:layout_constraintTop_toBottomOf="@+id/iconInvitations" />
+
+                    <TextView
+                        android:id="@+id/countNumberInvitations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="@+id/iconInvitations"
+                        app:layout_constraintTop_toTopOf="@+id/iconInvitations" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/interviewInvitationDialogVideoInterview"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/iconMyCalendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_video_interview"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Video Interview"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconMyCalendar"
+                        app:layout_constraintStart_toStartOf="@+id/iconMyCalendar"
+                        app:layout_constraintTop_toBottomOf="@+id/iconMyCalendar" />
+
+                    <TextView
+                        android:id="@+id/countNumberMyCalendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconMyCalendar"
+                        app:layout_constraintTop_toTopOf="@+id/iconMyCalendar" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/interviewInvitationDialogGeneralInterview"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/iconMyPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_general_interview"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="General Interview"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconMyPoints"
+                        app:layout_constraintStart_toStartOf="@+id/iconMyPoints"
+                        app:layout_constraintTop_toBottomOf="@+id/iconMyPoints" />
+
+                    <TextView
+                        android:id="@+id/countNumberMyPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconMyPoints"
+                        app:layout_constraintTop_toTopOf="@+id/iconMyPoints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/moreView3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#66595959"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/moreInvitationsLL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!--BdJobs Feature-->
+            <TextView
+                android:id="@+id/moreBFTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Bdjobs Features"
+                android:textColor="#595959"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moreView3" />
+
+            <LinearLayout
+                android:id="@+id/moreCategoryLLBF"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moreBFTitle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/morePointSysCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconPointSys"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_point_system_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Point System"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconPointSys"
+                        app:layout_constraintStart_toStartOf="@+id/iconPointSys"
+                        app:layout_constraintTop_toBottomOf="@+id/iconPointSys" />
+
+                    <TextView
+                        android:id="@+id/countNumberPointSys"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconPointSys"
+                        app:layout_constraintTop_toTopOf="@+id/iconPointSys" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/smsJobsAlertCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconSmsJobsAlert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_sms_job_alert_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="SMS Job Alert"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconSmsJobsAlert"
+                        app:layout_constraintStart_toStartOf="@+id/iconSmsJobsAlert"
+                        app:layout_constraintTop_toBottomOf="@+id/iconSmsJobsAlert" />
+
+                    <TextView
+                        android:id="@+id/countNumberSmsJobsAlert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="@+id/iconSmsJobsAlert"
+                        app:layout_constraintTop_toTopOf="@+id/iconSmsJobsAlert" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/myCalendarCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconMyCalendarMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_my_calendar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="My Calender"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconMyCalendarMore"
+                        app:layout_constraintStart_toStartOf="@+id/iconMyCalendarMore"
+                        app:layout_constraintTop_toBottomOf="@+id/iconMyCalendarMore" />
+
+                    <TextView
+                        android:id="@+id/countNumberMyCalendarMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconMyCalendarMore"
+                        app:layout_constraintTop_toTopOf="@+id/iconMyCalendarMore" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/careerResourcesCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconCareerResources"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_career_resources_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Career Resources"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconCareerResources"
+                        app:layout_constraintStart_toStartOf="@+id/iconCareerResources"
+                        app:layout_constraintTop_toBottomOf="@+id/iconCareerResources" />
+
+                    <TextView
+                        android:id="@+id/countNumberCareerResources"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconCareerResources"
+                        app:layout_constraintTop_toTopOf="@+id/iconCareerResources" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moreCategoryLLBF2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moreCategoryLLBF">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/empCertificateCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconEmpCertificate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_emp_certificate_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Employability Certification"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconEmpCertificate"
+                        app:layout_constraintStart_toStartOf="@+id/iconEmpCertificate"
+                        app:layout_constraintTop_toBottomOf="@+id/iconEmpCertificate" />
+
+                    <TextView
+                        android:id="@+id/countNumberEmpCertificate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="-4dp"
+                        android:background="@drawable/count_number_background"
+                        android:padding="1dp"
+                        android:text="+9"
+                        android:textColor="#ffffff"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/iconEmpCertificate"
+                        app:layout_constraintTop_toTopOf="@+id/iconEmpCertificate" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/moreView4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#66595959"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/moreCategoryLLBF2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!--Support-->
+            <TextView
+                android:id="@+id/moreSupportTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Support"
+                android:textColor="#595959"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moreView4" />
+
+            <LinearLayout
+                android:id="@+id/moreCategoryLLSupport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moreSupportTitle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/moreSettingsCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconSettings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_settings_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Settings"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconSettings"
+                        app:layout_constraintStart_toStartOf="@+id/iconSettings"
+                        app:layout_constraintTop_toBottomOf="@+id/iconSettings" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/transactionOverViewCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconTransactionOverView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_tran_over_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Transection Over View"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconTransactionOverView"
+                        app:layout_constraintStart_toStartOf="@+id/iconTransactionOverView"
+                        app:layout_constraintTop_toBottomOf="@+id/iconTransactionOverView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/appGuidesCl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconAppGuides"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_app_guides_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="App Guides"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconAppGuides"
+                        app:layout_constraintStart_toStartOf="@+id/iconAppGuides"
+                        app:layout_constraintTop_toBottomOf="@+id/iconAppGuides" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/jobApplicationGuidelineCL"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconJobApplicationGuideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_job_apl_more"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Job Application Guidelines"
+                        android:textAlignment="center"
+                        android:textColor="#5B5B5B"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iconJobApplicationGuideline"
+                        app:layout_constraintStart_toStartOf="@+id/iconJobApplicationGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/iconJobApplicationGuideline" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
