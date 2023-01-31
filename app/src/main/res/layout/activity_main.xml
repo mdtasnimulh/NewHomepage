@@ -28,8 +28,8 @@
 
             <ImageView
                 android:id="@+id/main_profile_logo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="14dp"
                 android:contentDescription="profile_picture"
@@ -585,8 +585,8 @@
 
                         <ImageView
                             android:id="@+id/imgAppliedJobs"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/ic_applied_jobs"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -633,8 +633,8 @@
 
                         <ImageView
                             android:id="@+id/iconFavouriteSearch"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/ic_favourite_search"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -681,8 +681,8 @@
 
                         <ImageView
                             android:id="@+id/imgShortlistedJobs"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/ic_shortlisted_jobs"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -729,8 +729,8 @@
 
                         <ImageView
                             android:id="@+id/iconProfileView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/ic_profile_view"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -790,8 +790,8 @@
 
                         <ImageView
                             android:id="@+id/imgFollowedEmployers"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/ic_followed_employers"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -840,8 +840,8 @@
 
                         <ImageView
                             android:id="@+id/iconInvitations"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/ic_test_invitations"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -888,8 +888,8 @@
 
                         <ImageView
                             android:id="@+id/iconMyCalendar"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/ic_my_calendar"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -936,8 +936,8 @@
 
                         <ImageView
                             android:id="@+id/iconMyPoints"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/ic_my_points"
                             app:layout_constraintEnd_toEndOf="parent"

@@ -136,8 +136,8 @@
 
                     <ImageView
                         android:id="@+id/moreBdJobsLearnIcon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="12dp"
                         android:contentDescription="bdJobsLearning"
                         android:src="@drawable/ic_bdjobs_learning_icon"
@@ -178,8 +178,8 @@
 
                     <ImageView
                         android:id="@+id/moreManageProfileIcon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="12dp"
                         android:contentDescription="bdJobsLearning"
                         android:src="@drawable/ic_manage_profile_icon"
@@ -220,8 +220,8 @@
 
                     <ImageView
                         android:id="@+id/moreFavouriteSearchIcon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="12dp"
                         android:contentDescription="bdJobsLearning"
                         android:src="@drawable/ic_bdjobs_learning_icon"
@@ -262,8 +262,8 @@
 
                     <ImageView
                         android:id="@+id/moreAppliedJobsIcon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="12dp"
                         android:contentDescription="bdJobsLearning"
                         android:src="@drawable/ic_applied_jobs"
@@ -306,8 +306,8 @@
 
                     <ImageView
                         android:id="@+id/moreFollowedEmployersIcon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="12dp"
                         android:contentDescription="bdJobsLearning"
                         android:src="@drawable/ic_followed_employers"
@@ -385,8 +385,8 @@
 
                     <ImageView
                         android:id="@+id/moreBdJobsProfile"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_bdjobs_profile_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -433,8 +433,8 @@
 
                     <ImageView
                         android:id="@+id/iconMoreVideoResume"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_video_resume_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -481,8 +481,8 @@
 
                     <ImageView
                         android:id="@+id/iconPersonalizedResume"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_personalized_resume_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -529,8 +529,8 @@
 
                     <ImageView
                         android:id="@+id/iconEmailedResume"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_emailed_resume_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -591,8 +591,8 @@
 
                     <ImageView
                         android:id="@+id/iconEmpViewed"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_emp_viewed_resume"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -678,8 +678,8 @@
 
                     <ImageView
                         android:id="@+id/iconGeneralSearch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_general_search_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -726,8 +726,8 @@
 
                     <ImageView
                         android:id="@+id/iconNewJobs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_new_jobs_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -774,8 +774,8 @@
 
                     <ImageView
                         android:id="@+id/iconDeadlineTomorrow"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_deadline_tomorrow_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -822,8 +822,8 @@
 
                     <ImageView
                         android:id="@+id/iconPtJobs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_pt_jobs_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -884,8 +884,8 @@
 
                     <ImageView
                         android:id="@+id/iconContractualJobs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_contract_jobs_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -932,8 +932,8 @@
 
                     <ImageView
                         android:id="@+id/iconGovtJobs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_government_jobs_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1021,8 +1021,8 @@
 
                     <ImageView
                         android:id="@+id/imgFollowedEmployers"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_live_interview"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1071,8 +1071,8 @@
 
                     <ImageView
                         android:id="@+id/iconInvitations"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_online_test"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1121,8 +1121,8 @@
 
                     <ImageView
                         android:id="@+id/iconMyCalendar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_video_interview"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1171,8 +1171,8 @@
 
                     <ImageView
                         android:id="@+id/iconMyPoints"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_general_interview"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1258,8 +1258,8 @@
 
                     <ImageView
                         android:id="@+id/iconPointSys"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_point_system_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1306,8 +1306,8 @@
 
                     <ImageView
                         android:id="@+id/iconSmsJobsAlert"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_sms_job_alert_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1354,8 +1354,8 @@
 
                     <ImageView
                         android:id="@+id/iconMyCalendarMore"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_my_calendar"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1402,8 +1402,8 @@
 
                     <ImageView
                         android:id="@+id/iconCareerResources"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_career_resources_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1464,8 +1464,8 @@
 
                     <ImageView
                         android:id="@+id/iconEmpCertificate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_emp_certificate_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1553,8 +1553,8 @@
 
                     <ImageView
                         android:id="@+id/iconSettings"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_settings_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1585,8 +1585,8 @@
 
                     <ImageView
                         android:id="@+id/iconTransactionOverView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_tran_over_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1617,8 +1617,8 @@
 
                     <ImageView
                         android:id="@+id/iconAppGuides"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_app_guides_more"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1649,8 +1649,8 @@
 
                     <ImageView
                         android:id="@+id/iconJobApplicationGuideline"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/ic_job_apl_more"
                         app:layout_constraintEnd_toEndOf="parent"

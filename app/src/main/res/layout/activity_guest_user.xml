@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,7 +16,7 @@
         android:layout_marginEnd="16dp"
         android:paddingVertical="7dp"
         android:paddingStart="8dp"
-        android:paddingEnd="5dp"
+        android:paddingEnd="8dp"
         android:text="Sign in"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -27,6 +28,170 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:id="@+id/guestUserCountLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guestUserSignInButton">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/guestUserLiveJobsCountCV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/guestUserLiveJobsCount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/guest_user_count_bg"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:id="@+id/guestUserLiveJobsCountNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4,662"
+                    android:textColor="#3167A8"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Live Jobs"
+                    android:textColor="#3167A8"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/guestUserLiveJobsCountNumber"
+                    app:layout_constraintStart_toStartOf="@+id/guestUserLiveJobsCountNumber"
+                    app:layout_constraintTop_toBottomOf="@+id/guestUserLiveJobsCountNumber" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/guestUserCompaniesCountCV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/guestUserCompaniesCount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/guest_user_count_bg"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:id="@+id/guestUserCompaniesCountNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="362"
+                    android:textColor="#3167A8"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Companies"
+                    android:textColor="#3167A8"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/guestUserCompaniesCountNumber"
+                    app:layout_constraintStart_toStartOf="@+id/guestUserCompaniesCountNumber"
+                    app:layout_constraintTop_toBottomOf="@+id/guestUserCompaniesCountNumber" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/guestUserNewJobsCountCV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/guestUserNewJobsCount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/guest_user_count_bg"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:id="@+id/guestUserNewJobsCountNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4,662"
+                    android:textColor="#3167A8"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="New Jobs"
+                    android:textColor="#3167A8"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/guestUserNewJobsCountNumber"
+                    app:layout_constraintStart_toStartOf="@+id/guestUserNewJobsCountNumber"
+                    app:layout_constraintTop_toBottomOf="@+id/guestUserNewJobsCountNumber" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -34,175 +199,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guestUserSignInButton">
+        app:layout_constraintTop_toBottomOf="@+id/guestUserCountLL">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/guestUserCountLL"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal"
-                android:weightSum="3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/guestUserLiveJobsCountCV"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:elevation="5dp"
-                    android:focusable="true"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="5dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/guestUserLiveJobsCount"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:background="@drawable/guest_user_count_bg"
-                        android:paddingHorizontal="18dp"
-                        android:paddingVertical="8dp">
-
-                        <TextView
-                            android:id="@+id/guestUserLiveJobsCountNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="4,662"
-                            android:textColor="#3167A8"
-                            android:textSize="24sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Live Jobs"
-                            android:textColor="#3167A8"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintEnd_toEndOf="@+id/guestUserLiveJobsCountNumber"
-                            app:layout_constraintStart_toStartOf="@+id/guestUserLiveJobsCountNumber"
-                            app:layout_constraintTop_toBottomOf="@+id/guestUserLiveJobsCountNumber" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/guestUserCompaniesCountCV"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:elevation="5dp"
-                    android:focusable="true"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="5dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/guestUserCompaniesCount"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:background="@drawable/guest_user_count_bg"
-                        android:paddingHorizontal="18dp"
-                        android:paddingVertical="8dp">
-
-                        <TextView
-                            android:id="@+id/guestUserCompaniesCountNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="362"
-                            android:textColor="#3167A8"
-                            android:textSize="24sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Companies"
-                            android:textColor="#3167A8"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintEnd_toEndOf="@+id/guestUserCompaniesCountNumber"
-                            app:layout_constraintStart_toStartOf="@+id/guestUserCompaniesCountNumber"
-                            app:layout_constraintTop_toBottomOf="@+id/guestUserCompaniesCountNumber" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/guestUserNewJobsCountCV"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:elevation="5dp"
-                    android:focusable="true"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="5dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/guestUserNewJobsCount"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:background="@drawable/guest_user_count_bg"
-                        android:paddingHorizontal="18dp"
-                        android:paddingVertical="8dp">
-
-                        <TextView
-                            android:id="@+id/guestUserNewJobsCountNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="4,662"
-                            android:textColor="#3167A8"
-                            android:textSize="24sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="New Jobs"
-                            android:textColor="#3167A8"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintEnd_toEndOf="@+id/guestUserNewJobsCountNumber"
-                            app:layout_constraintStart_toStartOf="@+id/guestUserNewJobsCountNumber"
-                            app:layout_constraintTop_toBottomOf="@+id/guestUserNewJobsCountNumber" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
 
             <TextView
                 android:id="@+id/guestUserSearchJobTitle"
@@ -216,7 +217,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/guestUserCountLL" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/guestUserSearchKeywordET"

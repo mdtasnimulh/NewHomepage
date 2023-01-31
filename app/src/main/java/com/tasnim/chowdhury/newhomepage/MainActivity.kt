@@ -185,7 +185,7 @@ class MainActivity : AppCompatActivity() {
         //val manageProfileDialogBoxCurrentProgress = 65
         //manageProfileDialogProgressBar = bottomSheetDialog.findViewById(R.id.manageProfileDialogProgressBar)!!
         //manageProfileDialogProgressBar.progress = manageProfileDialogBoxCurrentProgress
-        // manageProfileDialogProgressBar.max = 100
+        //manageProfileDialogProgressBar.max = 100
 
         bottomSheetDialog.setCanceledOnTouchOutside(true)
         bottomSheetDialog.setContentView(bottomSheetView)
