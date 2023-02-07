@@ -63,22 +63,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        //WindowCompat.setDecorFitsSystemWindows(window, false)
-//        requestWindowFeature(Window.FEATURE_NO_TITLE)
-//        this.window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-//        supportActionBar?.hide()
-        //this.window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+
         setContentView(binding.root)
 
         val marqueeText = findViewById<TextView>(R.id.mainPageMarquee)
         marqueeText.isSelected = true
 
         this.window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-
-//        val windowInsetsController =
-//            ViewCompat.getWindowInsetsController(window.decorView)
-//
-//        windowInsetsController?.isAppearanceLightNavigationBars = true
 
         // Setting Progress Bar
         progressBarManageProfile = findViewById(R.id.profileCompleteProgressBar)
@@ -176,16 +167,6 @@ class MainActivity : AppCompatActivity() {
             R.layout.manage_profile_bottom_sheet_layout,
             findViewById(R.id.manageProfileBottomSheetLayout)
         )
-
-        /*bottomSheetView.findViewById<View>(R.id.interviewInvitationDialogCloseIcon).setOnClickListener {
-            Toast.makeText(this, "Bottom Sheet Close", Toast.LENGTH_SHORT).show()
-            bottomSheetDialog.dismiss()
-        }*/
-
-        //val manageProfileDialogBoxCurrentProgress = 65
-        //manageProfileDialogProgressBar = bottomSheetDialog.findViewById(R.id.manageProfileDialogProgressBar)!!
-        //manageProfileDialogProgressBar.progress = manageProfileDialogBoxCurrentProgress
-        //manageProfileDialogProgressBar.max = 100
 
         bottomSheetDialog.setCanceledOnTouchOutside(true)
         bottomSheetDialog.setContentView(bottomSheetView)
